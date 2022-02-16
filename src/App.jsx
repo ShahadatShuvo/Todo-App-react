@@ -14,14 +14,14 @@ function App() {
   console.log(allTodos);
 
   function onTodoHandler(title) {
-    if (temp === true) {
+    if (temp === true) { // for new todo add
       const newTodo = {
         id: "id" + new Date().getTime(),
         title,
       };
       setAllTodos((prevAllTodos) => [newTodo, ...prevAllTodos]);
       setTemp(true);
-    } else
+    } else // this is for edit
       setAllTodos((prevAlltodos) => {
         let finalArray = [];
         for (let i = 0; i < prevAlltodos.length; i++) {
@@ -38,7 +38,7 @@ function App() {
         }
         return finalArray;
       });
-      setTemp(true);
+    setTemp(true);
   }
 
   function onDeleteHandler(id) {

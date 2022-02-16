@@ -2,9 +2,6 @@ import React from "react";
 
 function Form(props) {
   
-
-  // props.temp ? setTodo("") : setTodo(todo); 
-
   function handleChange(event) {
     props.setTodo(event.target.value);
   }
